@@ -1,0 +1,21 @@
+.headline {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.example {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.example input[type=submit] {
+  color: white;
+  background-color: #D00000;
+  border: 0px;
+  margin-top: 10px;
+}
+
+.example td, th {
+  padding: 5px;
+}

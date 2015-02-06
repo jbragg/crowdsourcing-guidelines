@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Crowdsourcing guidelines</title>
+  
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="style.css"  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#"></a>
+       </div>
+     </div>
+   </nav>
+    
+<div class="container">
+  
+  <div class="headline">
+    <h1>Crowdsourcing guidelines</h1>
+    <p class="lead">
+      Some tricks of the trade and common pitfalls to avoid.
+    </p>
+  </div>
+  
+  <h2>Clear instructions are crucial</h2>
+    <p>
+      No matter how careful you are, you won't write the instructions clearly the first time.  
+      There is no substitute for getting someone (a roommate or friend and eventually crowdsourced workers)
+      to try the task and provide feedback. (It's a good idea always to have someway that a worker can provide feedback, btw.)
+    </p>
+    <p>
+      Workers won't read your instructions, especially if they are long. 
+      It's just human nature... they will skip ahead and try to start doing the actual work.
+      To combat this, insert quiz questions after each paragraph in your instructions to ensure they 
+      got the point.
+    </p>
+    <p>
+      It's also a good idea (if you can) to make the UI so easy to use that the workers don't <i>have</i> to remember anything 
+      (e.g., use hover or confirmation).
+    </p>
+
+  <h2>Some workers are spammers</h2>
+    <p>
+      On most crowdsourcing platforms you will need to perform some kind of quality 
+      control to eliminate results from bad workers.  Most approaches involve some kind of 
+      redundancy: either asking multiple workers to perform the same task and looking for agreement, 
+      or else randomly inserting <em>gold questions</em>, ones for which there exists a gold-standard 
+      answer already known - and then blacklisting workers who get too many of these wrong.  Note: 
+      it is often useful to consider three kinds of answers to gold questions:
+      <ol>
+        <li>answers that are  clearly right - if a worker fails to provide this answer, they aren't being diligent;</li>
+        <li>answers that are clearly wrong - if a worker provides this answer, they are also bad;</li>
+        <li>answers that are ambiguous or require some kind of judgement - where any response is ok from the POV of 
+            estimating worker quality.</li>
+      </ol>
+      Many crowdsourcing tasks (e.g., image tagging) can require a mixture of these 
+      types of answers.
+    </p>
+
+  <h2>Making results unbiased</h2>
+    <p>
+      Before seeing a question, a worker should be equally likely to provide any of
+      the responses one wishes to be unbiased.
+    </p>
+
+  <h3>Response defaults</h3>
+    <p>
+      A worker should have to explicitly make a selection. For example, when
+      requesting tags for an image, one should <emph>not</emph> default to "no" by
+      using checkboxes, as in this example:
+    </p>
+      <div class="example" style="width: 200px;">
+   	      <form>
+          <table>
+            <tr><td><input type="checkbox"></td><td>Person</td></tr>
+            <tr><td><input type="checkbox"></td><td>Animal</td></tr>
+            <tr><td><input type="checkbox"></td><td>None of the above</td></tr>
+          </table>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    <p>
+      Instead, it is better to use radio buttons and explicitly make the worker
+      select "yes" or "no", as in this example:
+    </p>
+      <div class="example" style="width: 200px">
+        <form>
+          <table>
+            <tr>
+              <th>Yes</th><th>No</th>
+            </tr>
+            <tr>
+              <td><input type="radio" name="person" value="yes"></td>
+              <td><input type="radio" name="person" value="no"></td>
+              <td>Person</td>
+            </tr>
+              <td><input type="radio" name="animal" value="yes"></td>
+              <td><input type="radio" name="animal" value="no"></td>
+              <td>Animal</td>
+            </tr>        
+          </table>
+        <input type="submit" value="Submit">
+        </form>
+      </div>
+  <h3>Response placement</h3>
+    <p>
+      Another way that results can be biased has to do with the order of possible
+      responses. People are more likely to select responses that are closer
+      to the top. Thus, when asking multiple choice questions, be sure to randomize
+      the order of the answers.
+    </p>
+
+</div><!-- /.container -->
+ 
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
